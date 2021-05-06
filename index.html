@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive - Open Data Week 2021 Event Recordings</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://pagecdn.io/lib/normalize/8.0.1/normalize.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        body {
+            background: #120844;
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .main {
+            max-width: 95%;
+            margin: auto;
+        }
+
+        .accordion_description,
+        input::placeholder {
+            color: black;
+        }
+
+        a:link {
+            color: #e14d43;
+        }
+
+        .filters {
+            background-color: #281255;
+            padding: 2px 5px 8px 5px;
+
+        }
+
+
+        @media screen and (min-width: 1000px) {
+            .main {
+                max-width: 80%;
+                margin: auto;
+            }
+        }
+
+
+        .banner {
+            background: url("https://2021.open-data.nyc/wp-content/uploads/2021/03/UrfZkJn-1.png");
+            background-size: cover;
+            background-position: 50% 65%;
+            padding: 0;
+            min-height: 45vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='main'>
+        <h1 class='title'>View Open Data Week 2021 Event Recordings</h1>
+        <p><a href="https://www.open-data.nyc/"> What is open data week?</a></p>
+        <div class='banner'></div>
+        <div id="observablehq-title3-5a84943d"></div>
+        <div class="filters">
+            <div id="observablehq-legend-5a84943d"></div>
+            <div id="observablehq-viewof-viewOnlyLinks-5a84943d"></div>
+            <div id="observablehq-viewof-searchedEvents-5a84943d"></div>
+        </div>
+
+        <div id="observablehq-content-5a84943d"></div>
+        <div id="observablehq-title4-5a84943d"></div>
+        <div id="observablehq-style-5a84943d"></div>
+    </div>
+
+    <script type="module">
+        import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+        import define from "https://api.observablehq.com/d/13070976788dfdf0.js?v=3";
+        new Runtime().module(define, name => {
+            if (name === "legend") return new Inspector(document.querySelector("#observablehq-legend-5a84943d"));
+            if (name === "viewof viewOnlyLinks") return new Inspector(document.querySelector("#observablehq-viewof-viewOnlyLinks-5a84943d"));
+            if (name === "viewof searchedEvents") return new Inspector(document.querySelector("#observablehq-viewof-searchedEvents-5a84943d"));
+            if (name === "title3") return new Inspector(document.querySelector("#observablehq-title3-5a84943d"));
+            if (name === "content") return new Inspector(document.querySelector("#observablehq-content-5a84943d"));
+            if (name === "title4") return new Inspector(document.querySelector("#observablehq-title4-5a84943d"));
+            if (name === "style") return new Inspector(document.querySelector("#observablehq-style-5a84943d"));
+            return ["filteredEvents", "searchedEvents"].includes(name);
+        });
+    </script>
+</body>
+
+</html>
