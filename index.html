@@ -83,6 +83,7 @@
             background-repeat: no-repeat;
             background-position: center;
             padding-top: 5rem;
+            margin-top: 5rem;
             min-height: 20vh;
         }
 
@@ -107,19 +108,17 @@
             <p>Open Data Week is a festival of community-driven events that celebrates the many ways New Yorkers engage
                 with
                 the <a href="https://opendata.cityofnewyork.us/" target="_blank">free public data
-                    about their city</a>. The 2021 festival was jointly organized by the <a
-                    href="http://nyc.gov/analytics" target="_blank">NYC Mayor’s Office of
-                    Data Analytics</a>, <a href="https://beta.nyc/" target="_blank">BetaNYC</a>, and <a
-                    href="https://www.dxd2021.com/" target="_blank">Data Through Design</a>. Now in its fifth year, Open
+                    about their city</a>. The festival is jointly organized by the <a
+                    href="https://www1.nyc.gov/content/oti/pages/" target="_blank">NYC Mayor’s Office of
+                    Data Analytics, now NYC Office of Technology & Innovation (OTI)</a>, <a href="https://beta.nyc/" target="_blank">BetaNYC</a>, and <a
+                    href="https://www.dxd2021.com/" target="_blank">Data Through Design</a>. Open
                 Data Week takes place during
-                the first week of March to celebrate New York City’s Open Data Law, which was signed into law on March
+                the first week of March to celebrate New York City's Open Data Law, which was signed into law on March
                 7,
                 2012, and International Open Data Day which is typically the first Saturday in March.
             </p>
-            <p>This year, we did things a bit differently with more than 150 virtual and outdoor events allowing people
-                to
-                learn and share their work around open data, technology, and design. We invite you to <a
-                    href="https://2021.open-data.nyc">check out the program here</a> and watch recordings of some of the
+            <p>We invite you to <a
+                    href="https://2022.open-data.nyc">check out the program here</a> and watch recordings of some of the
                 events below!
             </p>
         </div>
@@ -127,6 +126,7 @@
         <div id="observablehq-title3-5a84943d"></div>
         <div class="filters">
             <div id="observablehq-legend-5a84943d"></div>
+            <div id="observablehq-viewof-year-d3b9d41b"></div>
             <div id="observablehq-viewof-viewOnlyLinks-5a84943d"></div>
             <div id="observablehq-viewof-searchedEvents-5a84943d"></div>
         </div>
@@ -140,6 +140,7 @@
         import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
         import define from "https://api.observablehq.com/d/13070976788dfdf0.js?v=3";
         new Runtime().module(define, name => {
+            if (name === "viewof year") return new Inspector(document.querySelector("#observablehq-viewof-year-d3b9d41b"));
             if (name === "legend") return new Inspector(document.querySelector("#observablehq-legend-5a84943d"));
             if (name === "viewof viewOnlyLinks") return new Inspector(document.querySelector("#observablehq-viewof-viewOnlyLinks-5a84943d"));
             if (name === "viewof searchedEvents") return new Inspector(document.querySelector("#observablehq-viewof-searchedEvents-5a84943d"));
